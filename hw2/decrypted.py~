@@ -1,0 +1,26 @@
+def count(enc):
+    count = []
+    for i in enc:
+        c = enc.count(i)
+        x = enc.index(i)
+        count.append(str(c) + ',' + str(x))
+
+    for i in count:
+        print(i + str(count.count(i)))
+        while count.count(i) > 1:
+            count.remove(i)
+
+    return count
+
+def main():
+    message = open('encrypted_message.txt', 'r')
+    enc = []
+    for line in message:
+        enc.append(line)
+    message.close()
+
+    enc_count = []
+    enc_count = count(enc)
+    print(enc_count)
+if __name__ == '__main__':
+    main()

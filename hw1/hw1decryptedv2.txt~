@@ -1,0 +1,59 @@
+Due Date: before the middle of September
+
+
+FOR THIS ASSIGNMENT SUBMIT THE
+FOLLOWING ITEMS BY EMAIL BEFORE
+THE MIDDLE OF NEXT MONTH 
+
+FIRST DESCRIBE THE SUBSTITUTION TABLE
+USED FOR THE LETTERS PRESENT IN THE PLAIN TEXT
+"A" -> "P"  
+"B" -> "C"      
+"D" -> "D"      
+"E" -> "L"  
+"G" -> "W"  
+"H" -> "N"  
+"I" -> "K"  
+"J" -> "B"  
+"K" -> "V"  
+"L" -> "H"  
+"M" -> "X"  
+"O" -> "I"  
+"P" -> "F"  
+"Q" -> "M"  
+"R" -> "R"  
+"S" -> "E"  
+"T" -> "Y"  
+"U" -> "T"  
+"V" -> "G"  
+"W" -> "O"  
+"X" -> "A"  
+"Y" -> "S"  
+"Z" -> "U"
+
+SECOND DESCRIBE CAREFULLY HOW YOU BREAK THE CIPHER
+
+You break the cipher by replacing letters until english words or what looks like englih starts to form and then add in the rest of the letters
+to complete the words.  At the start replacing the three most common letters with e,t and a also help get decryption started.  In this specific
+case knowing that the due date was also encrypted in the message helped because a large chunk of letter kept reappearing and it could be guessed that
+it was the word assignment encrypted.
+
+THIRD DESCRIBE AND IMPLEMENT
+YOUR OWN CIPHER SYSTEM FOR
+ENCRYPTING AND DECRYPTING TEXT FILES
+YOU MAY USE ANY PROGRAMMING LANGUAGE
+OF YOUR CHOICE ALSO INCLUDE A BRIEF
+DISCUSSION COMPARING THE RELATIVE
+SECURITY OF YOUR CIPHER TO THE
+MONOALPHABETIC SUBSTITUTION CIPHER
+USED FOR THE TEXT OF THIS ASSIGNMENT
+AS PART OF THE SUBMISSION FOR THE
+THIRD PART PROVIDE A LIVE
+DEMONSTRATION OF YOUR SYSTEM 
+
+
+
+THIS ASSIGNMENT WAS POSTED THREE DAYS
+BEFORE THE END OF AUGUST IN THE 
+YEAR TWENTY THIRTEEN
+

@@ -1,0 +1,60 @@
+import os, socket
+from Crypto import Random
+from Crypto.Random import random
+from Crypto.PublicKey import ElGamal
+from Crypto.Util.number import GCD
+from Crypto.Hash import SHA
+from Crypto.Cipher import AES
+
+def aes(iv, cipher, message):
+    msg = message.encode('utf-8')
+    enc_message = iv + cipher.encrypt(msg)
+    return enc_message
+
+def elgamal(key, message, K):
+    return key.encrypt(message, K)
+
+def generate_aes(key):
+#    secretkey = bytes(key, 'utf-8')
+    secretkey = key.encode('utf-8')
+    iv = Random.new().read(AES.block_size)
+    cipher = AES.new(secretkey, AES.MODE_CFB, iv)
+#    msg = message.encode('utf-8') 
+#    enc_msg = iv + cipher.encrypt(b'Attack at dawn')
+#    enc_msg = iv + cipher.encrypt(msg)
+    return iv, cipher
+
+def generate_elgamal(klength, privatekey):
+    print "el gamel"
+    key = ElGamal.generate(klength, Random.new().read)
+    h = SHA.new(privatekey).digest()
+    while 1:
+        k = random.StrongRandom().randint(1,key.p-1)
+        if GCD(k, key.p-1) == 1: break
+    sig = key.sign(h,k)
+    if key.verify(h,sig):
+        print "OK"
+        return key, h , sig
+    else:
+        print "Incorrect signature"
+        return None
+
+def chat():
+    print "chat"
+
+def main():
+    print "main"
+    privatekey = "huehuehuehuehueh"
+    key, h, sig = generate_elgamal(512, privatekey)
+    print key
+    print sig
+    print h
+    enc_msg = elgamal(key,'poop', sig)
+    print(enc_msg)
+    message = 'Attack at dawn'
+    iv, cipher = generate_aes(privatekey)
+    print iv
+    print cipher
+
+if __name__ == '__main__':
+    main()
